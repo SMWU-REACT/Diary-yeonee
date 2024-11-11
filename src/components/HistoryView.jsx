@@ -1,6 +1,9 @@
 import "./HistoryView.css";
+import { useNavigate } from "react-router-dom";
 
 function HistoryView() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div style={{ display: "flex", alignItems: "center" }}>
@@ -8,6 +11,7 @@ function HistoryView() {
           className="back-btn"
           onClick={() => {
             // MainView 화면으로 전환
+            navigate('/');
           }}>
           &lt;
         </button>

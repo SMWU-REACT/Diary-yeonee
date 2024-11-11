@@ -1,6 +1,9 @@
 import "./MainView.css";
+import { useNavigate } from "react-router-dom";
 
 function MainView() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="header">
@@ -10,6 +13,7 @@ function MainView() {
             className="history-btn"
             onClick={() => {
               // HistoryView 화면으로 전환
+              navigate('/history');
             }}>
             기록 보기
           </button>
